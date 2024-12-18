@@ -1,6 +1,5 @@
 # ApiJS
 
-# ApiJS
 
 ## Description
 
