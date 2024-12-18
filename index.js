@@ -20,7 +20,7 @@ async function fetchWeatherData() {
     const filteredData = filterWeatherData(rawData);
 
     // Sauvegarder les données filtrées dans un fichier JSON
-    saveDataToFile("filtered_weather_data.json", filteredData);
+    saveDataToFile("data/filtered_weather_data.json", filteredData);
 
     return filteredData; // Retourner les données filtrées pour un usage ultérieur
   } catch (error) {
@@ -34,11 +34,13 @@ async function fetchWeatherData() {
  * @returns {Object} - Les données filtrées.
  */
 function filterWeatherData(data) {
-  const { latitude, longitude, hourly } = data; // Récupérer uniquement les propriétés utiles
+  const { latitude, longitude, elevation, hourly, current_weather } = data; // Récupérer uniquement les propriétés utiles
   return {
-    latitude, // Inclure la météo actuelle
+    latitude,
     longitude,
+    elevation,
     hourly, // Inclure les données horaires
+    current_weather, // Inclure la météo actuelle
   };
 }
 
