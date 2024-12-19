@@ -1,4 +1,5 @@
-const fs = require("fs"); // Importer le module File System (Node.js)
+import fs from 'fs';
+ // Importer le module File System (Node.js)
 
 const BASE_URL =
   "https://api.open-meteo.com/v1/forecast?latitude=48.8534&longitude=2.3488&current=temperature_2m&hourly=temperature_2m,wind_speed_10m";
